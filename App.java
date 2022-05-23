@@ -1,14 +1,22 @@
 class App {
   public static void main(String args[]) {
-    String message = "Hello, world!";
-    String vin = "0102030";
+    String vin = "VIN: 0102030";
     String make = "Ford F-150";
     String color = "Black";
     String towing = "Towing package included";
-    String quality = "A";
-    String odometer = "1,400 miles";
-    String price = "$48,000";
+    String quality = "Quality: A";
+    String odometer = "Odometer: 1,400 miles";
+    String price = "Price $48,000";
 
-    System.out.println(message + vin + make + color + towing + quality + odometer + price);
+    StringBuilder vehicleInformation = new StringBuilder();
+    vehicleInformation.append(vin);
+    vehicleInformation.append(";" + make);
+    vehicleInformation.append(";" + color);
+    vehicleInformation.append(";" + towing);
+    vehicleInformation.append(";" + quality);
+    vehicleInformation.append(";" + odometer);
+    vehicleInformation.append(";" + price);
+
+    System.out.println(vehicleInformation);
   }
 }
